@@ -33,15 +33,15 @@ class ProductHistory(models.Model):
         # string concatenation and explicit singular/plural
         # to make life easier for translators
         if days > 1:
-            return str(days) + ' ' + _('days ago')
+            return _('%s days ago') % str(days)
         elif days == 1:
-            return str(days) + ' ' + _('Yesterday')
+            return _('%s Yesterday') % str(days)
         elif hours > 1:
-            return str(hours) + ' ' + _('hours ago')
+            return _('%s hours ago') % str(hours)
         elif hours == 1:
-            return str(hours) + ' ' + _('hour ago')
+            return _('%s hour ago') % str(hours)
         elif minutes > 1:
-            return str(minutes) + ' ' + _('minutes ago')
+            return _('%s minutes ago') % str(minutes)
         elif minutes == 1:
-            return str(minutes) + ' ' + _('minute ago')
+            return _('%s minute ago') % str(minutes)
         return _('Less than a minute ago')
