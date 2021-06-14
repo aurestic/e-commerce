@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="product" inherit_id="website_sale.product">
-        <xpath expr="//*[@id='product_detail']/div[2]/div[1]" position="after">
-            <div class="col-sm-7 o_not_editable">
+        <xpath expr="//t[@groups='website_sale.group_website_multi_image']" position="after">
+            <div class="o_not_editable">
                 <p t-field="product.public_description" id="product_public_description"/>
             </div>
         </xpath>
